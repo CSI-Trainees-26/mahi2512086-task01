@@ -1,5 +1,8 @@
-p{
-    /*font-size:20px;*/
+*{
+    font-family:'segoe ui',Arial, sans-serif
+}
+body{
+    margin: 0;
 }
 .login-container {
     display: flex;
@@ -20,7 +23,7 @@ p{
 .right{
     width: 40%;
     background-color: #ffffff;
-    padding:40px;
+    padding:60px 50px;
     display:flex;
     flex-direction:column;
     justify-content:center;
@@ -42,9 +45,17 @@ button {
     border-radius: 8px;
 }
 .right input{
-    width:100%;
-    padding:12px;
+    padding: 14px 16px;
     margin:10px 0;
-    border: 1px solid;
-    border-radius:8px;
+    border: 1px solid #e0e0e0;
+    border-radius:10px;
+    background: #f8f9ff;
+}
+.login-bt{
+    background: #0d47a1;
+    color:#ffffff;
+    padding:14px;
+    width:100%;
+    border-radius: 10px;
+
 }
