@@ -1,0 +1,57 @@
+body{
+    font-family:'segoe UI', sans-serif;
+    background-color: #f9fbff;
+    color:#1a1a1a;
+
+}
+.about-main{
+    text-align: center;
+    background:#f8faff;
+}
+.about-main h1{
+    font-size:42px;
+    color:#0d2a54;
+}
+.story{
+    display:flex;
+    padding:60px;
+    align-items: center;
+}
+.steps{
+    display:flex;
+    justify-content: center;
+    margin-top:30px;
+}
+.step{
+    background:white;
+    padding:30px;
+    border-radius: 16px;
+    width:220px;
+    text-align: center;
+}
+.step span {
+    background:#e8eeff;
+    color:#1a5cff;
+    padding:8px 14px;
+    border-radius:20px;
+    font-weight:700;
+}
+.contact form {
+    max-width:500px;
+    margin:20px auto;
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+ }
+.contact input, textarea {
+    padding:14px;
+    border-radius:8px;
+    border:1px solid #ddd;
+}
+.contact button {
+    background:#1a5cff;
+    color:white;
+    border:none;
+    padding:14px;
+    border-radius:8px;
+}
