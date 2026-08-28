@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search Colleges - Campusly</title>
+  <link rel="stylesheet" href="index_style.css">
+  <link rel="stylesheet" href="search_style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo"> Campusly</div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="about.html">About</a>
+    </div>
+  </nav>
+
+  <main class="search-page">
+    <section class="search-box">
+      <h2>Find Your Perfect College</h2>
+      <div class="search-filters">
+        <div class="filter-item">
+          <label>Course</label>
+          <select id="course">
+            <option>Select Course</option>
+            <option>B.Tech</option>
+            <option>BCA</option>
+            <option>MBA</option>
+            <option>BBA</option>
+            <option>MBBS</option>
+          </select>
+        </div>
+
+        <div class="filter-item">
+          <label>Location</label>
+          <select id="location">
+            <option>Any Location</option>
+            <option>Delhi</option>
+            <option>Kanpur</option>
+            <option>Bangalore</option>
+            <option>Rajasthan</option>
+            <option>Pune</option>
+          </select>
+        </div>
+
+        <div class="filter-item">
+          <label>Max Fees</label>
+          <select id="fees">
+            <option>Any Fees</option>
+            <option>Under 1 Lakh</option>
+            <option>1-2 Lakhs</option>
+            <option>2-4 Lakhs</option>
+            <option>Above 4 Lakhs</option>
+          </select>
+        </div>
+
+        <div class="filter-item">
+          <label>Exam Accepted</label>
+          <select id="exam">
+            <option>Any Exam</option>
+            <option>JEE</option>
+            <option>CUET</option>
+            <option>CAT</option>
+            <option>NEET</option>
+          </select>
+        </div>
+
+        <button class="search-btn">Search</button>
+      </div>
+    </section>
+    <section class="results-section">
+      <div class="results-header">
+        <h3>Showing 6 Colleges</h3>
+        <span>Based on your filters</span>
+      </div>
+
+      <div class="grid-container">
+        <div class="card">
+          <div class="card-img">
+            <img src="collegeimg/knpiit.jpg" alt="IIT KANPUR"></div>
+          <div class="card-info">
+            <h3>IIT KANPUR</h3>
+            <p>Kanpur • B.Tech • ₹2.2L/year</p>
+            <p class="tag">JEE Advanced • ⭐ 4.8</p>
+            <button>View Details</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-img">
+            <img src="collegeimg/BITS-Pilani.jpg" alt="BITS PILANI"></div>
+          <div class="card-info">
+            <h3>BITS PILANI</h3>
+            <p>Rajasthan • B.Tech • ₹4.5L/year</p>
+            <p class="tag">BITSAT • ⭐ 4.7</p>
+            <button>View Details</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-img">
+            <img src="collegeimg/du.jpg" alt="Delhi University"></div>
+          <div class="card-info">
+            <h3>DELHI UNIVERSITY</h3>
+            <p>Delhi • BCA • ₹25k/year</p>
+            <p class="tag">CUET • ⭐ 4.6</p>
+            <button>View Details</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>

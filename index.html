@@ -3,47 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page</title>
+    <title>Campusly - Home</title>
     <link rel="stylesheet" href="index_style.css">
 </head>
 <body>
-    <nav class="navbar">
-    <div class="logo">
-       <h3><b>Campusly</b></h3>
-    </div>
-    <div class="links">
-    <a href="index.html">Home</a>
-    <a href="colleges.html">College</a>
-    <a href="about.html">About</a>
-    <a href="dashboard.html">Dashboard</a>
-    <a href="login_page.html" class="login-bt">Login</a> 
-   </div>
-   </nav>
-   <section class="hero">
-    <h1>Discover Your Future Campus</h1>
-    <p>Search 4,000+ colleges by major, location, cost and more — find the best fit for yourself</p>
-    <div class="search">
-    <input type="text" placeholder="Search for Colleges, Majors and more ">
-    <button id="search-btn">Search</button>
-   </div>
-   <div class="tags">
-    <span>Undergraduate</span>
-    <span>Graduate</span>
-    <span>Online</span>
-   </div>
-   </section>
-   <section class="colleges">
-    <h2>Top Colleges For You</h2>
-    <div class="cards">
-        <div class="card">IIT KANPUR</div>
-        <div class="card">Delhi University</div>
-        <div class="card">BITS Pilani</div>
-    </div>
+    <header>
+        <h1>Campusly</h1>
+        <nav>
+            <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="college.html">Search Colleges</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="login_page.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h2>Find Your Dream College</h2>
+            <p>Explore thousands of universities, check out campus life, and track your applications all in one place.</p>
+            <a href="search.html" class="btn">Start Exploring</a>
+        </section>
+<section class="search-container">
+<h3>Featured Universities</h3>
+<p>Check out some of the top-ranked colleges this year.</p>
 </section>
-<section class="ratings">
-    <div><h3>4000+</h3><p>Colleges</p></div>
-    <div><h3>50K+</h3><p>Programs</p></div>
-    <div><h3>90%</h3><p>Satisfaction</p></div>
-</section>
+<div class="grid-container">
+    <div class="card">
+        <div class="card-img">
+            <img src="collegeimg/BITS-Pilani.jpg" alt="BITS Pilani">
+            </div>
+            <h3>BITS PILANI</h3>
+            <p>Rajasthan</p>
+            </div>
+<div class="card">
+     <div class="card-img">
+        <img src="collegeimg/knpiit.jpg" alt="IIT KANPUR">
+        </div>
+        <h3>IIT KANPUR</h3>
+        <p>Kanpur</p>
+        </div>
+<div class="card">
+    <div class="card-img">
+    <img src="collegeimg/du.jpg" alt="Delhi University">
+    </div>
+    <h3>Delhi University</h3>
+    <p>New Delhi</p>
+    </div>
+    </div>
+    </main>
+<footer>
+    <p>&copy; 2026 Campusly. All rights reserved.</p>
+    </footer>
 </body>
 </html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - Campusly</title>
+  <link rel="stylesheet" href="dash_style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">Campusly</div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="search.html">Search</a>
+      <a href="dashboard.html" class="active">Dashboard</a>
+      <a href="about.html">About</a>
+    </div>
+  </nav>
+
+  <div class="dash-container">
+    <aside class="sidebar">
+      <div class="profile">
+        <img src="collegeimg/STUDENT.png">
+        <h3>Mahi Gupta</h3>
+        <p>B.Tech Aspirant</p>
+      </div>
+      <ul class="menu">
+        <li class="active">📌 Saved Colleges</li>
+        <li>📊 Compare (2)</li>
+        <li>📝 Applications</li>
+        <li>⚙️ Settings</li>
+        <li>🚪 Logout</li>
+      </ul>
+    </aside>
+    <main class="main-content">
+      <div class="top-cards">
+        <div class="stat-card">
+          <h2>6</h2>
+          <p>Saved Colleges</p>
+        </div>
+        <div class="stat-card">
+          <h2>2</h2>
+          <p>Compared</p>
+        </div>
+        <div class="stat-card">
+          <h2>1</h2>
+          <p>Applied</p>
+        </div>
+      </div>
+      <h2 class="section-title">Your Saved Colleges</h2>
+      <div class="saved-grid">
+        <div class="saved-card">
+          <img src="collegeimg/iit-k.jpg">
+          <div class="info">
+            <h3>IIT Kanpur</h3>
+            <p>Kanpur • JEE Advanced</p>
+            <div class="progress"><div class="bar" style="width:80%"></div></div>
+            <p class="small">80% Match</p>
+          </div>
+          <button>View</button>
+          <button class="remove">Remove</button>
+        </div>
+        <div class="saved-card">
+          <img src="collegeimg/BITS-Pilani.jpg">
+          <div class="info">
+            <h3>BITS Pilani</h3>
+            <p>Rajasthan • BITSAT</p>
+            <div class="progress"><div class="bar" style="width:65%"></div></div>
+            <p class="small">65% Match</p>
+          </div>
+          <button>View</button>
+          <button class="remove">Remove</button>
+        </div>
+      </div>
+      <h2 class="section-title">Quick Compare</h2>
+      <div class="compare-box">
+        <table>
+          <tr><th>Feature</th><th>IIT Kanpur</th><th>BITS Pilani</th></tr>
+          <tr><td>Fees / Year</td><td>₹2.2 Lakh</td><td>₹4.5 Lakh</td></tr>
+          <tr><td>Rating</td><td>⭐ 4.8</td><td>⭐ 4.7</td></tr>
+          <tr><td>Placement</td><td>95%</td><td>92%</td></tr>
+        </table>
+      </div>
+
+    </main>
+  </div>
+</body>
+</html>
