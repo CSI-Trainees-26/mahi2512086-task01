@@ -110,3 +110,27 @@ footer {
   object-fit: cover;
   display: block;
 }
+@media (max-width: 900px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards in tablet */
+  }
+  .navbar {
+    padding: 12px 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .grid-container {
+    grid-template-columns: 1fr; /* 1 card in mobile */
+  }
+  .card-img {
+    height: 220px;
+  }
+  h1 {
+    font-size: 24px;
+  }
+  .nav-links a {
+    margin-left: 12px;
+    font-size: 14px;
+  }
+}
