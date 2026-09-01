@@ -116,4 +116,81 @@ nav ul li a:hover::after{
   background: #002147 !important;
   color: white !important;
 }
+/* ===============================
+   UNIVERSAL RESPONSIVE FOR ALL PAGES
+   Paste at bottom of every CSS file
+   =============================== */
 
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .hero-search-box, .about-hero {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  /* NAV */
+  nav {
+    flex-direction: column;
+    gap: 12px;
+    padding: 12px 4%;
+  }
+  nav ul {
+    gap: 4px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  /* HERO */
+  .search-hero, .about-hero, header {
+    padding: 30px 6% 50px !important;
+    text-align: left !important;
+  }
+  .search-hero h1, .about-hero h1, .hero-content h1 {
+    font-size: 28px !important;
+    line-height: 1.25 !important;
+  }
+
+  /* SEARCH BOX */
+  .hero-search-box {
+    flex-direction: column;
+    padding: 16px;
+    gap: 16px;
+  }
+  .field, .search-btn {
+    width: 100%;
+  }
+
+  /* GRIDS */
+  .grid, .features, .steps, .values {
+    grid-template-columns: 1fr !important;
+    flex-direction: column !important;
+  }
+
+  /* CONTAINERS */
+  .container, .trust-bar, .quick-filters, .extra-box, .cta {
+    padding-left: 6% !important;
+    padding-right: 6% !important;
+  }
+
+  .trust-bar {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+    margin-top: -20px;
+  }
+
+  .cta {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .card-img { height: 180px; }
+  .search-hero h1 { font-size: 24px !important; }
+  .logo { font-size: 22px; }
+}

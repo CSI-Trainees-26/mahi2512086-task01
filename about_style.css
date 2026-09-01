@@ -402,3 +402,88 @@ nav ul li a.active {
   background: #ffcc00;
   color: #002147;
 }
+/*10.RESPONSIVE */
+/* ===============================
+   RESPONSIVE - MOBILE + TABLET
+   =============================== */
+
+/* Tablet - 1024px */
+@media (max-width: 1024px) {
+  .about-hero {
+    flex-direction: column;
+    gap: 30px;
+    padding-top: 20px;
+  }
+  .hero-left h1 {
+    font-size: 38px;
+  }
+  .hero-left h1 span {
+    height: auto;
+  }
+  .img-card img {
+    height: 320px;
+  }
+}
+
+/* Mobile - 768px */
+@media (max-width: 768px) {
+  nav {
+    padding: 12px 4%;
+  }
+  nav ul li a {
+    padding: 7px 12px;
+    font-size: 13px;
+  }
+  
+  .about-hero {
+    padding: 20px 6% 40px;
+  }
+  
+  .hero-left h1 {
+    font-size: 32px;
+    line-height: 1.2;
+  }
+
+  .hero-stats {
+    gap: 20px;
+  }
+
+  .story-section {
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px 6%;
+    border-radius: 0;
+  }
+
+  .steps {
+    flex-direction: column;
+  }
+
+  .values {
+    flex-direction: column;
+  }
+
+  .cta {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    margin: 40px 4%;
+  }
+
+  .back-btn {
+    margin-left: 4%;
+  }
+}
+
+/* Small Mobile - 480px */
+@media (max-width: 480px) {
+  .hero-left h1 {
+    font-size: 28px;
+  }
+  .hero-left p {
+    font-size: 15px;
+  }
+  .img-card img {
+    height: 260px;
+  }
+}
