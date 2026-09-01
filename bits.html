@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>BITS Pilani - Campusly</title>
+  <link rel="stylesheet" href="index_style.css">
+  <style>
+    *{ margin:0; padding:0; box-sizing:border-box; }
+    body{ font-family:Arial; background:#f4f7f6; }
+    .hero-img{
+      width:100%; height:55vh;
+      background: url('https://images.unsplash.com/photo-1562774053-701939374585') center/cover;
+      position:relative;
+    }
+    .hero-img::after{
+      content:''; position:absolute; inset:0;
+      background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    }
+    .hero-text{
+      position:absolute; bottom:40px; left:5%; color:white; z-index:2;
+    }
+    .hero-text h1{ font-size:48px; }
+    .hero-text p{ font-size:18px; opacity:0.9; }
+
+    .details{
+      max-width:1100px; margin:-40px auto 40px;
+      background:white; border-radius:20px;
+      padding:35px; position:relative; z-index:3;
+      box-shadow:0 10px 30px rgba(0,0,0,0.1);
+      display:grid; grid-template-columns:1.8fr 1fr; gap:35px;
+    }
+    .badge{ background:#eef4ff; color:#003366; padding:6px 14px; border-radius:20px; font-size:13px; margin-right:8px; display:inline-block; margin-bottom:8px; }
+    .info-card{ background:#f9fafb; padding:20px; border-radius:12px; margin-bottom:20px; }
+    .info-card h3{ color:#003366; margin-bottom:12px; border-left:4px solid #ffcc00; padding-left:10px; }
+    .side-card{ background:#003366; color:white; padding:25px; border-radius:16px; position:sticky; top:20px; }
+    .side-card h3{ color:#ffcc00; margin-bottom:15px; }
+    .side-card p{ margin:10px 0; }
+    .btn{ display:block; text-align:center; background:#ffcc00; color:#003366; padding:12px; border-radius:30px; text-decoration:none; font-weight:bold; margin-top:15px; }
+    .back{ position:absolute; top:20px; left:20px; z-index:4; background:white; padding:8px 16px; border-radius:20px; text-decoration:none; color:#003366; font-weight:bold; }
+    @media(max-width:800px){ .details{ grid-template-columns:1fr; margin:-20px 15px 20px; } .hero-text h1{ font-size:32px; } }
+  </style>
+</head>
+<body>
+
+  <div class="hero-img">
+    <a href="college.html" class="back">← Back</a>
+    <div class="hero-text">
+      <h1>BITS Pilani</h1>
+      <p><i class="fas fa-map-marker-alt"></i> Pilani, Rajasthan | NIRF #8</p>
+    </div>
+  </div>
+
+  <div class="details">
+    <!-- LEFT SIDE -->
+    <div>
+      <div class="info-card">
+        <h3>About College</h3>
+        <p>BITS Pilani is India's most prestigious private engineering institute. Known for its flexible curriculum, no reservation, and strong startup culture. Campus is 328 acres with world-class labs.</p>
+      </div>
+
+      <div class="info-card">
+        <h3>Popular Courses</h3>
+        <span class="badge">B.E. Computer Science</span>
+        <span class="badge">B.E. Electronics</span>
+        <span class="badge">B.E. Mechanical</span>
+        <span class="badge">B.Pharm</span>
+      </div>
+
+      <div class="info-card">
+        <h3>Facilities</h3>
+        <span class="badge">🏫 24x7 Library</span>
+        <span class="badge">🏠 Hostel</span>
+        <span class="badge">⚽ Sports Complex</span>
+        <span class="badge">💡 Incubation Center</span>
+      </div>
+
+      <div class="info-card">
+        <h3>Campus Life</h3>
+        <p>3 major fests - OASIS (cultural), BOSM (sports), APOGEE (tech). 80+ clubs. No attendance pressure - true freedom.</p>
+      </div>
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div>
+      <div class="side-card">
+        <h3>Quick Facts</h3>
+        <p>💰 Fees: 5.2 Lakhs / Year</p>
+        <p>💼 Avg Package: 30 LPA</p>
+        <p>🏆 Highest: 1.2 Cr</p>
+        <p>📅 Established: 1964</p>
+        <p>👥 Students: 4000+</p>
+        <a href="#" class="btn">Apply Now</a>
+        <a href="#" class="btn" style="background:white;">Download Brochure</a>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

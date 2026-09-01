@@ -1,120 +1,503 @@
-.navbar {
+/* ======================================================
+   SEARCH STYLE.CSS - FINAL VERSION
+   Matches index.html theme - Clean & Spaced
+   ====================================================== */
+
+/* --------------------------
+   1. RESET & BASE
+   -------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', 'Inter', sans-serif;
+}
+
+body {
+  background: #f4f6f9;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* --------------------------
+   2. NAVBAR (Same as index)
+   -------------------------- */
+nav {
+  background: white;
+  padding: 14px 5%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 16px 40px;
-  background: white;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.05);
   position: sticky;
   top: 0;
-  z-index: 100;
-  background-color: #0d2a54;
+  z-index: 1000;
 }
+
 .logo {
-  font-size: 22px;
   font-weight: 800;
-  color: #f4f7f6;
+  font-size: 26px;
+  color: #002147;
 }
-.nav-links a {
-  margin-left: 25px;
-  text-decoration: none;}
 
-.search-page { background: #f6f8ff; min-height: 100vh; padding: 20px; }
+.logo span {
+  color: #ffcc00;
+}
 
-.search-box {
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 8px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #555;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 9px 20px;
+  border-radius: 25px;
+  transition: 0.25s;
+}
+
+nav ul li a:hover {
+  background: #eef4ff;
+  color: #002147;
+}
+
+nav ul li a.active {
+  background: #002147;
+  color: white;
+}
+
+/* --------------------------
+   3. HERO SECTION
+   -------------------------- */
+.search-hero {
+  background: linear-gradient(135deg, #002147 0%, #004a99 100%);
+  padding: 65px 5% 95px;
+  text-align: center;
+  color: white;
+}
+
+.hero-content h1 {
+  font-size: 44px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.hero-content p {
+  opacity: 0.85;
+  margin: 12px 0 35px;
+  font-size: 17px;
+}
+
+/* --------------------------
+   4. SEARCH BOX
+   -------------------------- */
+.hero-search-box {
   background: white;
   max-width: 1100px;
-  margin: 20px auto;
-  padding: 30px;
-  border-radius: 16px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
-  text-align: center;
-}
-.search-box h2 { color: #0d2a54; margin-bottom: 20px; }
-
-.search-filters {
-  display: flex;
-  gap: 15px;
-  justify-content: center;
-  flex-wrap: wrap;
-  align-items: flex-end;
-}
-.filter-item { display: flex; flex-direction: column; text-align: left; min-width: 160px; }
-.filter-item label { font-size: 13px; font-weight: 600; margin-bottom: 6px; color: #555; }
-.filter-item select {
+  margin: 0 auto;
+  border-radius: 20px;
   padding: 12px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  background: #f9f9ff;
+  display: flex;
+  gap: 12px;
+  align-items: flex-end;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.25);
+}
+
+.field {
+  flex: 1;
+  text-align: left;
+}
+
+.field label {
+  font-size: 11px;
+  font-weight: 700;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0 0 6px 12px;
+  display: block;
+}
+
+.field select {
+  width: 100%;
+  border: none;
+  background: #f4f6f9;
+  padding: 14px 15px;
+  border-radius: 12px;
+  outline: none;
+  font-weight: 600;
+  color: #333;
+  cursor: pointer;
 }
 
 .search-btn {
-  background: #1a5cff;
-  color: white;
+  background: #ffcc00;
   border: none;
-  padding: 12px 28px;
-  border-radius: 8px;
-  font-weight: 700;
-  cursor: pointer;
-  height: 44px;
-}
-.search-btn:hover { background: #0d47d1; }
-.results-section { max-width: 1100px; margin: 30px auto; }
-.results-header { display: flex; justify-content: space-between; margin-bottom: 15px; }
-
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 20px;
-}
-.card {
-  background: white;
+  padding: 15px 32px;
   border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  font-weight: 800;
+  color: #002147;
+  cursor: pointer;
+  transition: 0.2s;
+  font-size: 15px;
 }
-.card-img { height: 180px; overflow: hidden; }
-.card-img img { width: 100%; height: 100%; object-fit: cover; }
-.card-info { padding: 15px; text-align: center; }
-.card-info p { color: #666; font-size: 14px; margin: 5px 0; }
-.tag { background: #eef3ff; color: #1a5cff; display: inline-block; padding: 4px 10px; border-radius: 20px; font-size: 12px !important; }
-.card-info button {
-  margin-top: 10px;
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #1a5cff;
+
+.search-btn:hover {
+  background: #ffdb4d;
+  transform: translateY(-1px);
+}
+
+/* --------------------------
+   5. TRUST BAR
+   -------------------------- */
+.trust-bar {
+  max-width: 900px;
+  margin: -32px auto 0;
   background: white;
-  color: #1a5cff;
-  border-radius: 8px;
+  border-radius: 16px;
+  padding: 20px 30px;
+  display: flex;
+  justify-content: space-around;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  border: 1px solid #eef2f7;
+  position: relative;
+  z-index: 10;
+}
+
+.trust-bar div {
+  font-size: 13px;
+  color: #777;
+}
+
+.trust-bar strong {
+  color: #002147;
+  font-size: 17px;
+  margin-right: 5px;
+}
+
+/* --------------------------
+   6. QUICK FILTERS
+   -------------------------- */
+.quick-filters {
+  max-width: 1200px;
+  margin: 35px auto 0;
+  padding: 0 5%;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.quick-filters h3 {
+  font-size: 14px;
+  color: #002147;
+  margin-right: 8px;
+}
+
+.quick-filters button {
+  border: 1px solid #dbe4f0;
+  background: white;
+  padding: 9px 18px;
+  border-radius: 25px;
+  font-size: 13px;
   font-weight: 600;
   cursor: pointer;
+  transition: 0.25s;
+  color: #334155;
 }
-.card-info button:hover { background: #1a5cff; color: white; }
-.card {
-    background: white;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    width: 300px;
-    padding: 24px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    text-align: center;
+
+.quick-filters button:hover {
+  background: #002147;
+  color: white;
+  border-color: #002147;
 }
-.card-img {
-    background-color: #ccc;
-    height: 150px;
-    border-radius: 4px;
-    margin-bottom: 16px;
+
+/* --------------------------
+   7. MAIN CONTAINER
+   -------------------------- */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 35px 5% 20px;
 }
-.card-img {
-  width: 100%;
-  height: 200px;
-  background: #ddd;
+
+.section-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.section-head h2 {
+  font-size: 22px;
+  color: #002147;
+  font-weight: 800;
+}
+
+.section-head span {
+  font-weight: 400;
+  color: #777;
+  font-size: 13px;
+  margin-left: 10px;
+}
+
+.sort select {
+  border: 1px solid #dbe4f0;
+  padding: 9px 14px;
   border-radius: 10px;
-  overflow: hidden;
+  background: white;
+  outline: none;
+  font-weight: 500;
 }
+
+/* --------------------------
+   8. CARDS GRID - ORIGINAL FORMAT FIXED
+   -------------------------- */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 28px;
+}
+
+.card {
+  background: white;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+  transition: all 0.35s ease;
+  border: 1px solid #eef2f7;
+}
+
+.card-img {
+  height: 210px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
 .card-img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
+  transition: 0.5s;
+}
+
+.card:hover .card-img img {
+  transform: scale(1.06);
+}
+
+.rating-badge {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 700;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+}
+
+.card-body {
+  padding: 18px 20px 20px;
+}
+
+.card-body h3 {
+  font-size: 19px;
+  font-weight: 800;
+  color: #002147;
+  margin-bottom: 4px;
+}
+
+.location {
+  font-size: 14px;
+  color: #667085;
+  margin-bottom: 10px;
+}
+
+.tags {
+  display: flex;
+  gap: 8px;
+  margin: 12px 0 14px;
+  flex-wrap: wrap;
+}
+
+.tag {
+  background: #eef4ff;
+  color: #002147;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 6px 12px;
+  border-radius: 20px;
+  border: 1px solid #d6e4ff;
+  letter-spacing: 0.3px;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #f1f5f9;
+  border-bottom: 1px solid #f1f5f9;
+  padding: 14px 0;
+  margin: 12px 0 0;
+}
+
+.stats div {
+  display: flex;
+  flex-direction: column;
+}
+
+.stats span {
+  font-size: 11px;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  font-weight: 600;
+}
+
+.stats strong {
+  font-size: 15px;
+  color: #002147;
+  margin-top: 3px;
+  font-weight: 800;
+}
+
+.save-btn {
+  width: 100%;
+  margin-top: 16px;
+  background: #002147;
+  color: white;
+  border: none;
+  padding: 13px;
+  border-radius: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 14px;
+}
+
+.save-btn:hover {
+  background: #ffcc00;
+  color: #002147;
+}
+
+/* --------------------------
+   9. HOVER EFFECT - LIGHT CREAM
+   -------------------------- */
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 18px 40px rgba(0,33,71,0.15);
+  background: #fffef5;
+  border-color: #ffe082;
+}
+
+.card:hover h3 {
+  color: #002147;
+}
+
+.card:hover .tag {
+  background: white;
+}
+
+/* --------------------------
+   10. EXTRA CONTENT SECTIONS
+   -------------------------- */
+.extra-section {
+  background: white;
+  margin-top: 60px;
+  padding: 60px 5%;
+  border-top: 1px solid #f1f5f9;
+}
+
+.extra-box {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.extra-box h2 {
+  color: #002147;
+  font-size: 30px;
+  font-weight: 800;
+  margin-bottom: 35px;
+}
+
+.features {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+}
+
+.features div {
+  background: #f8fafc;
+  padding: 28px 24px;
+  border-radius: 18px;
+  flex: 1;
+  border: 1px solid #eef2f7;
+  transition: 0.3s;
+}
+
+.features div:hover {
+  background: white;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+  transform: translateY(-4px);
+}
+
+.features h4 {
+  color: #002147;
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+.features p {
+  color: #667085;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.cta {
+  background: linear-gradient(135deg, #002147 0%, #00397a 100%);
+  max-width: 1200px;
+  margin: 60px auto 0;
+  padding: 45px 40px;
+  border-radius: 22px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 15px 40px rgba(0,33,71,0.25);
+}
+
+.cta h2 {
+  font-size: 28px;
+  font-weight: 800;
+}
+
+.cta p {
+  opacity: 0.8;
+  margin-top: 8px;
+}
+
+.cta button {
+  margin-top: 20px;
+  background: #ffcc00;
+  border: none;
+  padding: 13px 32px;
+  border-radius: 30px;
+  font-weight: 800;
+  color: #002147;
+  cursor: pointer;
+  transition: 0.2s;
+  font-size: 15px;
+}
+
+.cta button:hover {
+  background: #ffdb4d;
+  transform: scale(1.05);
 }

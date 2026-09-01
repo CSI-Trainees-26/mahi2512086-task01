@@ -1,73 +1,130 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Campusly - Search</title>
-    <link rel="stylesheet" href="college_style.css">
+  <title>Campusly - Search Colleges</title>
+  <link rel="stylesheet" href="college_style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<body>
-    <header>
-        <h1>Campusly</h1>
-        <nav>
+<header>
+     <nav>
+        <div class="logo">Campusly.</div>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="search.html">Search Colleges</a></li>
-                <li><a href="dashboard.html">Dashboard</a></li>
-                <li><a href="login_page.html">Login</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="college.html">Search Colleges</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="login_page.html">Login</a></li>
             </ul>
         </nav>
-    </header>
-    <main>
-        <section class="search-container">
-            <h2>Search for Colleges</h2>
-            <br>
-            <input type="text" placeholder="Search by name, major, or state...">
-            <button class="btn" style="margin-top: 0;">Search</button>
-        </section>
-        <div class="grid-container">
-            <div class="card">
-                <div class="card-img">
-                <img src="collegeimg/du.jpg" alt="Delhi University">
-                </div>
-                <h3>Delhi University</h3>
-                <p>New Delhi</p>
-                <p>Overall Rating 4.1</p>
-                <a href="" class="btn">Save College</a>
-            </div>
-            <div class="card">
-                <div class="card-img">
-                    <img src="collegeimg/iitbhu.jpg" alt="IIT BHU">
-                </div>
-                <h3>IIT BHU</h3>
-                <p>Varanasi</p>
-                <p>Overall Rating 4.3</p>
-                <a href="" class="btn">Save College</a>
-            </div>
-            <div class="card">
-                <div class="card-img">
-                    <img src="collegeimg/BITS-Pilani.jpg" alt="BITS Pilani">
-                </div>
-                <h3>BITS PILANI</h3>
-                <p>Rajasthan</p>
-                <p>Overall Rating 4.6</p>
-                <a href="" class="btn">Save College</a>
-            </div>
-            <div class="card">
-                <div class="card-img">
-                    <img src="collegeimg/knpiit.jpg" alt="IIT KANPUR">
-                </div>
-                <h3>IIT KANPUR</h3>
-                <p>Kanpur</p>
-                <p>Overall Rating 4.4</p>
-                <a href="" class="btn">Save College</a>
-            </div>
-        </div>
-    </main>
+</header>
+<body>
 
-    <footer>
-        <p>&copy; 2026 Campusly. All rights reserved.</p>
-    </footer>
+  <div class="search-header">
+    <h1>Find Your Dream College</h1>
+    <p>Explore 500+ top colleges across India - Fees, Placement, Reviews</p>
+    <div class="search-box">
+      <input type="text" placeholder="Search by name, course (BTech, MBA), or state...">
+      <button><i class="fas fa-search"></i> Search</button>
+    </div>
+  </div>
+
+  <div class="filters">
+    <div class="filter-pill active">All Colleges</div>
+    <div class="filter-pill">Engineering</div>
+    <div class="filter-pill">Top Rated 4.5+</div>
+    <div class="filter-pill">Fees < 5 Lakh</div>
+    <div class="filter-pill">Delhi</div>
+    <div class="filter-pill">Mumbai</div>
+    <div class="filter-pill">Bangalore</div>
+  </div>
+
+  <div class="container">
+    <div class="grid">
+      
+      <!-- CARD 1 -->
+      <a href="du.html" class="card">
+        <div class="card-img">
+          <img src="collegeimg/du.jpg">
+          <div class="rating-badge">⭐ 4.1 / 5</div>
+        </div>
+        <div class="card-body">
+          <h3>Delhi University</h3>
+          <div class="location"><i class="fas fa-map-marker-alt"></i> New Delhi • Central University</div>
+          <div class="tags">
+            <span class="tag">BA</span><span class="tag">BSc</span><span class="tag">CUET</span>
+          </div>
+          <div class="stats">
+            <div><span>Avg Fees</span><strong>₹15K / yr</strong></div>
+            <div><span>Placement</span><strong>₹8 LPA</strong></div>
+            <div><span>Est.</span><strong>1922</strong></div>
+          </div>
+          <button class="save-btn">View Details <i class="fas fa-arrow-right"></i></button>
+        </div>
+      </a>
+
+      <!-- CARD 2 -->
+      <a href="iitbhu.html" class="card">
+        <div class="card-img">
+          <img src="collegeimg/iitbhu.jpg">
+          <div class="rating-badge">⭐ 4.3 / 5</div>
+        </div>
+        <div class="card-body">
+          <h3>IIT BHU</h3>
+          <div class="location"><i class="fas fa-map-marker-alt"></i> Varanasi • IIT</div>
+          <div class="tags">
+            <span class="tag">B.Tech</span><span class="tag">JEE Advanced</span><span class="tag">NIRF #15</span>
+          </div>
+          <div class="stats">
+            <div><span>Avg Fees</span><strong>₹2.3L / yr</strong></div>
+            <div><span>Placement</span><strong>₹22 LPA</strong></div>
+            <div><span>Est.</span><strong>1919</strong></div>
+          </div>
+          <button class="save-btn">View Details <i class="fas fa-arrow-right"></i></button>
+        </div>
+      </a>
+
+      <!-- CARD 3 -->
+      <a href="bits.html" class="card">
+        <div class="card-img">
+          <img src="collegeimg/BITS-Pilani.jpg">
+          <div class="rating-badge" style="background:#002147;color:#ffcc00">⭐ 4.6 / 5 TOP</div>
+        </div>
+        <div class="card-body">
+          <h3>BITS Pilani</h3>
+          <div class="location"><i class="fas fa-map-marker-alt"></i> Rajasthan • Private</div>
+          <div class="tags">
+            <span class="tag">B.E.</span><span class="tag">BITSAT</span><span class="tag">No Reservation</span>
+          </div>
+          <div class="stats">
+            <div><span>Avg Fees</span><strong>₹5.2L / yr</strong></div>
+            <div><span>Placement</span><strong>₹30 LPA</strong></div>
+            <div><span>Est.</span><strong>1964</strong></div>
+          </div>
+          <button class="save-btn">View Details <i class="fas fa-arrow-right"></i></button>
+        </div>
+      </a>
+      <!-- AIIMS CARD -->
+<a href="aiims.html" class="card">
+  <div class="card-img">
+    <img src="collegeimg/AIIMS.jpeg">
+    <div class="rating-badge" style="background:#e40000;color:white">⭐ 4.9 / 5</div>
+  </div>
+  <div class="card-body">
+    <h3>AIIMS Delhi</h3>
+    <div class="location"><i class="fas fa-map-marker-alt"></i> New Delhi • Medical</div>
+    <div class="tags">
+      <span class="tag">MBBS</span><span class="tag">NEET</span><span class="tag">NIRF #1</span>
+    </div>
+    <div class="stats">
+      <div><span>Avg Fees</span><strong>₹1.6K / yr</strong></div>
+      <div><span>Placement</span><strong>₹25 LPA</strong></div>
+      <div><span>Est.</span><strong>1956</strong></div>
+    </div>
+    <button class="save-btn">View Details <i class="fas fa-arrow-right"></i></button>
+  </div>
+</a>
+
+    </div>
+  </div>
 
 </body>
 </html>
